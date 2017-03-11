@@ -1,3 +1,7 @@
+// clifford - it has the basic parts here.  The lab wants us to split the templates off into their own files, which I did not do.
+// Also, lots of stuff is hard coded so tweak the stuff to your desires.
+
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include<string>
