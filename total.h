@@ -16,6 +16,7 @@ T total(int numInputs)
 	{
 		cout << "Enter value: ";
 		cin >> temp;
+		cin.ignore();
 		runningTotal += temp;
 	}
 	return runningTotal;
