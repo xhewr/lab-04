@@ -4,8 +4,16 @@
 
 /*
 Program description: This program demonstrates the functionality of
-the findMinimum(), findMaximum(), findAbsolute() and total() template
+the minimum(), maximum(), getAbsolute() and total() template
 functions when tested with with different data types.
+
+
+The minimum() template returns the lowest of two passed values.  // clifford- even though you covered all of this, I thought a little redundancy doesn't hurt.
+The mamium() template returns the highest of two passed values.  // I doubt the teacher will dock us points for too much psuedo code.  I hope...
+																 // Use at your discretion.
+The getAbsoluteValue() template returns the absolute value of the passed number
+The total() template gets user input for values and then returns the sum of all the values entered.
+
 */
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -14,22 +22,22 @@ functions when tested with with different data types.
 //#include "findAbsolute.h"
 //#include "total.h"
 #include <iostream>
-#include<string>
+#include <string>
 
 using namespace std;
 
-//Template to find minimum value function
+//Template to find the minimum value of two variables
 //Accepts 2 parameters of type T
 //Returns the smallest
 //Works with all types that have a < operator (int, double, char, string)
 template <class T>
-T minimum(T number1, T number2)  // clifford - the books wants this as the name
+T minimum(T number1, T number2)  // clifford - the book wants this as the name
 {
 	return (number1 < number2) ? number1 : number2;
 }
 
 
-//Template to find maximum value function
+//Template to find maximum value of two variables
 //Accepts 2 parameters type T
 //Returns the largest 
 //Works with all types that have a < operator (int, double, char, string)
@@ -43,7 +51,7 @@ T maximum(T number1, T number2)  // clifford - the books wants this as the name
 //Template to absolute value function
 //Accepts single parameter of type T
 //Returns the absolute value for the passed value 
-//Worls with all types that can be compared with a "< 0" and have a - operator (not strings)
+//Works with all types that can be compared with a "< 0" and have a - operator (not strings)
 template <class T>
 T getAbsoluteValue(T args)
 {
@@ -55,8 +63,9 @@ T getAbsoluteValue(T args)
 }
 
 
-//Template to total value function
+//Template to keep a running total of values entered by the user, then return the sum of all the values entered
 //Will return a type T and takes an int as argument
+// The int argument represents the number of values the user will enter.
 //T cannot be a string because strings can't be set to 0
 //cin needs to support type T
 template <typename T>
@@ -121,8 +130,8 @@ int main()
 	cout << "Positive double    " << doubleC << "   " << getAbsoluteValue(doubleC) << endl;
 	cout << "Negative double   " << doubleL << "   " << getAbsoluteValue(doubleL) << endl;
 	cout << "Int                 " << intergerK << "      " << getAbsoluteValue(intergerK) << endl;  // clifford - is this needed? I think the pos and neg ints display is enough
-	cout << "Char              " << int(characterM) << "     " << int(getAbsoluteValue(characterM)) << endl;
-
+	cout << "Char              " << int(characterM) << "     " << int(getAbsoluteValue(characterM)) << endl;  // clifford- I don't think this is needed because absolute value is used for numbers.
+																											  // plus, I don't think there is a negative ascii character
 	cout << endl << endl;;
 
 
@@ -134,7 +143,7 @@ int main()
 	double totalDouble = 0;
 
 	cout << "Running total for two integer values:" << endl;
-	totalInt = total<int>(2);  //Fabiane: Tested on VS, but also had to instatiate the template explicitly.
+	totalInt = total<int>(2);
 	cout << "Running total is: " << totalInt << endl << endl;
 
 	cout << "_________________________" << endl;
