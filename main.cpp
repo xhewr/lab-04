@@ -129,8 +129,8 @@ int main()
 	cout << "Negative int      " << intergerJ << "     " << getAbsoluteValue(intergerJ) << endl;
 	cout << "Positive double    " << doubleC << "   " << getAbsoluteValue(doubleC) << endl;
 	cout << "Negative double   " << doubleL << "   " << getAbsoluteValue(doubleL) << endl;
-	cout << "Int                 " << intergerK << "      " << getAbsoluteValue(intergerK) << endl;  // clifford - is this needed? I think the pos and neg ints display is enough
-	cout << "Char              " << int(characterM) << "     " << int(getAbsoluteValue(characterM)) << endl;  // clifford- I don't think this is needed because absolute value is used for numbers.
+	//cout << "Int                 " << intergerK << "      " << getAbsoluteValue(intergerK) << endl;  // clifford - is this needed? I think the pos and neg ints display is enough
+	//cout << "Char              " << int(characterM) << "     " << int(getAbsoluteValue(characterM)) << endl;  // clifford- I don't think this is needed because absolute value is used for numbers.
 																											  // plus, I don't think there is a negative ascii character
 	cout << endl << endl;;
 
