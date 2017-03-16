@@ -8,19 +8,15 @@ the minimum(), maximum(), getAbsolute() and total() template
 functions when tested with with different data types.
 
 
-The minimum() template returns the lowest of two passed values.  // clifford- even though you covered all of this, I thought a little redundancy doesn't hurt.
-The mamium() template returns the highest of two passed values.  // I doubt the teacher will dock us points for too much psuedo code.  I hope...
-																 // Use at your discretion.
+The minimum() template returns the lowest of two passed values.  
+The maximium() template returns the highest of two passed values.  
+					
 The getAbsoluteValue() template returns the absolute value of the passed number
 The total() template gets user input for values and then returns the sum of all the values entered.
 
 */
 
 #define _CRT_SECURE_NO_WARNINGS
-//#include "findMinimum.h"
-//#include "findMaximum.h"
-//#include "findAbsolute.h"
-//#include "total.h"
 #include <iostream>
 #include <string>
 
@@ -31,7 +27,7 @@ using namespace std;
 //Returns the smallest
 //Works with all types that have a < operator (int, double, char, string)
 template <class T>
-T minimum(T number1, T number2)  // clifford - the book wants this as the name
+T minimum(T number1, T number2)  
 {
 	return (number1 < number2) ? number1 : number2;
 }
@@ -42,7 +38,7 @@ T minimum(T number1, T number2)  // clifford - the book wants this as the name
 //Returns the largest 
 //Works with all types that have a < operator (int, double, char, string)
 template <class T>
-T maximum(T number1, T number2)  // clifford - the books wants this as the name
+T maximum(T number1, T number2)  
 {
 	return (number1<number2) ? number2 : number1;
 }
@@ -75,7 +71,7 @@ T total(int numInputs)
 	T runningTotal = 0;
 	for (int count = 0; count < numInputs; count++)
 	{
-		cout << "Enter a number for value number " << count+1 << ": ";  // clifford- changed the wording a bit
+		cout << "Enter a number for value number " << count+1 << ": ";  
 		cin >> temp;
 		cin.ignore();
 		runningTotal += temp;
@@ -86,12 +82,12 @@ T total(int numInputs)
 
 int main()
 {
-	int intergerA = 12, intergerB = 15;  // clifford - renamed the variables so I can read the code easier
+	int intergerA = 12, intergerB = 15; 
 	double doubleC = 15.6, doubleD = 2.43;
 	char characterE = 'f', characterF = 'o';
 	string stringG = "foo", stringH = "bar";
 
-	// Demonstrating findMinimum template
+	// Demonstrating minimum template
 	cout << "Demonstrating minimum() template: " << endl; 
 	cout << "__________________________" << endl;
 	cout << "Type    " << "Values" << "      Result" << endl;
@@ -103,7 +99,7 @@ int main()
 
 	cout << endl << endl;
 
-	// Demonstrating findMaximum template
+	// Demonstrating maximum template
 	cout << "Demonstrating maximum() template: " << endl;
 	cout << "__________________________" << endl;
 	cout << "Type    " << "Values" << "      Result" << endl;
@@ -116,7 +112,7 @@ int main()
 	cout << endl << endl;
 
 
-	int intergerJ = -12, intergerK = 0;  // clifford - renamed the variables so I can read the code easier
+	int intergerJ = -12, intergerK = 0;  
 	double doubleL = -15.6;
 	char characterM = -50;
 
@@ -129,9 +125,6 @@ int main()
 	cout << "Negative int      " << intergerJ << "     " << getAbsoluteValue(intergerJ) << endl;
 	cout << "Positive double    " << doubleC << "   " << getAbsoluteValue(doubleC) << endl;
 	cout << "Negative double   " << doubleL << "   " << getAbsoluteValue(doubleL) << endl;
-	//cout << "Int                 " << intergerK << "      " << getAbsoluteValue(intergerK) << endl;  // clifford - is this needed? I think the pos and neg ints display is enough
-	//cout << "Char              " << int(characterM) << "     " << int(getAbsoluteValue(characterM)) << endl;  // clifford- I don't think this is needed because absolute value is used for numbers.
-																											  // plus, I don't think there is a negative ascii character
 	cout << endl << endl;;
 
 
@@ -148,7 +141,7 @@ int main()
 
 	cout << "_________________________" << endl;
 	cout << "Running total for three double values: " << endl;
-	totalDouble = total<double>(3);  //  clifford - I changed this to three becuase "for" and "four" look too similar, and three numbers is less to type in
+	totalDouble = total<double>(3); 
 	cout << "Running total is: " << totalDouble << endl;
 
 
